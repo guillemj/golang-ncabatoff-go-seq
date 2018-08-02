@@ -8,18 +8,17 @@ import (
 
 // Compare returns 0 if a and b are equal, -1 if a < b, or 1 if a > b.
 // Panics if a and b are not of the same type, or are of a type not listed here.
-// * Integer and float values are compared as Go compares them.
-// * Bools are compared as integers, assuming false == 0 and true == 1.
-// * Strings and byte slices are compared as Go compares strings.
-// * Two nil pointers are equal; one nil pointer is treated as "less" than a non-nil pointer.
-// * Non-nil pointers are compared by comparing the values they point to.
-// * Structures are compared by comparing their fields in order.
-// * Slices are compared by comparing elements sequentially.  If the slices are of different
-// length and all elements are the same up to the shorter length, the shorter slice is treated as
-// smaller.
-// * Maps can only be compared if they have string keys, in which case the ordered list of
-// keys are first compared as string slices, and if they're equal then the values are compared
-// sequentially in key order.
+//   * Bools are compared assuming false < true.
+//   * Strings, integer and float values are compared as Go compares them.
+//   * Two nil pointers are equal; one nil pointer is treated as smaller than a non-nil pointer.
+//   * Non-nil pointers are compared by comparing the values they point to.
+//   * Structures are compared by comparing their fields in order.
+//   * Slices are compared by comparing elements sequentially.  If the slices are of different
+//   length and all elements are the same up to the shorter length, the shorter slice is treated as
+//   smaller.
+//   * Maps can only be compared if they have string keys, in which case the ordered list of
+//   keys are first compared as string slices, and if they're equal then the values are compared
+//   sequentially in key order.
 func Compare(a, b interface{}) int {
 	return compareValue(reflect.ValueOf(a), reflect.ValueOf(b))
 }
