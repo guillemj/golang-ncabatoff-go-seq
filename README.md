@@ -2,6 +2,7 @@
 
 [![GoDoc](https://godoc.org/github.com/ncabatoff/go-seq/seq?status.svg)][godoc]
 [![Build Status](https://travis-ci.org/ncabatoff/go-seq.svg?branch=master)][travis]
+[![Coverage Status](https://coveralls.io/repos/github/ncabatoff/go-seq/badge.svg?branch=master)](https://coveralls.io/github/ncabatoff/go-seq?branch=master)
 
 This package is intended to allow ordering (most) values via reflection,
 much like go-cmp allows comparing values for equality.
