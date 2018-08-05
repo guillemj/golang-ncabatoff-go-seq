@@ -1,5 +1,7 @@
 sudo: false
 language: go
+before_install:
+  - go get github.com/mattn/goveralls
 matrix:
   include:
     - go: 1.6.x
@@ -9,7 +11,7 @@ matrix:
         - diff -u <(echo -n) <(gofmt -d .)
         - go install -v ./...
         - go vet -v ./...
-        - go test -v -race ./...
+        - $GOPATH/bin/goveralls -v -race -service=travis-ci
     - go: master
       script: go test -v -race ./...
   allow_failures:
