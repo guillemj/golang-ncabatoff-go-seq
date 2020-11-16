@@ -1,0 +1,30 @@
+Source: golang-github-ncabatoff-go-seq
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Section: golang
+Testsuite: autopkgtest-pkg-go
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+               golang-github-google-go-cmp-dev,
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-ncabatoff-go-seq
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-ncabatoff-go-seq.git
+Homepage: https://github.com/ncabatoff/go-seq
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/ncabatoff/go-seq
+
+Package: golang-github-ncabatoff-go-seq-dev
+Architecture: all
+Depends: golang-github-google-go-cmp-dev,
+         ${misc:Depends},
+Description: sequence go values to allow sorting them (library)
+ This package is intended to allow ordering (most) values via reflection,
+ much like go-cmp allows comparing values for equality.
+ .
+ This is helpful when trying to write Less() methods for sorting
+ structures.
+ .
+ Notable unsupported types include the builtin complex type, channels,
+ functions, and maps with non-string keys. Pointers can be ordered if
+ their underlying types can be ordered.
