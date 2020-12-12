@@ -1,5 +1,6 @@
 Source: golang-github-ncabatoff-go-seq
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Guillem Jover <gjover@sipwise.com>,
 Section: golang
 Testsuite: autopkgtest-pkg-go
 Priority: optional
