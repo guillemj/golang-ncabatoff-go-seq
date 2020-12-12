@@ -1,5 +1,5 @@
-golang-github-ncabatoff-go-seq (0.0~git20180805.b08ef85-1) UNRELEASED; urgency=medium
+golang-github-ncabatoff-go-seq (0.0~git20180805.b08ef85-1) unstable; urgency=medium
 
   * Initial release (Closes: #974934)
 
- -- Guillem Jover <gjover@sipwise.com>  Mon, 16 Nov 2020 13:03:45 +0100
+ -- Guillem Jover <gjover@sipwise.com>  Sat, 12 Dec 2020 01:05:22 +0100
