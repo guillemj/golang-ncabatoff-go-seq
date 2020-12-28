@@ -1,3 +1,9 @@
+golang-github-ncabatoff-go-seq (0.0~git20180805.b08ef85-2) unstable; urgency=medium
+
+  * Update gitignore files
+
+ -- Guillem Jover <gjover@sipwise.com>  Mon, 28 Dec 2020 16:15:10 +0100
+
 golang-github-ncabatoff-go-seq (0.0~git20180805.b08ef85-1) unstable; urgency=medium
 
   * Initial release (Closes: #974934)
