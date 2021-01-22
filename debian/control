@@ -17,6 +17,7 @@ XS-Go-Import-Path: github.com/ncabatoff/go-seq
 
 Package: golang-github-ncabatoff-go-seq-dev
 Architecture: all
+Multi-Arch: foreign
 Depends: golang-github-google-go-cmp-dev,
          ${misc:Depends},
 Description: sequence go values to allow sorting them (library)
